@@ -64,7 +64,8 @@ client.on(Events.InteractionCreate, async (interaction) => {
     await interaction.deferReply();
 
     try {
-      const response = await fetch('http://localhost:8080/api/tasks', {
+      const orchestratorUrl = process.env.AGENT_ORCHESTRATOR_URL || 'http://agent-orchestrator:8080';
+      const response = await fetch(`${orchestratorUrl}/api/tasks`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
