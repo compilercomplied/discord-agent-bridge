@@ -1,29 +1,31 @@
-# Use Node.js LTS version
-FROM node:20-alpine
+FROM node:20-alpine AS builder
 
-# Set working directory
 WORKDIR /app
 
-# Copy package files
 COPY package*.json ./
+RUN npm ci
 
-# Install dependencies
-RUN npm ci --only=production
-
-# Copy TypeScript config and source code
 COPY tsconfig.json ./
 COPY src ./src
 
-# Build TypeScript to JavaScript
-RUN npm install typescript && \
-    npm run build && \
-    npm uninstall typescript
+RUN npm run build
 
-# Remove source files after build
-RUN rm -rf src tsconfig.json
+# ------------------------------------------------------------------------------
+FROM builder AS tester
+COPY tests ./tests
+CMD ["npm", "run", "test:integration"]
 
-# Set environment to production
+# ------------------------------------------------------------------------------
+FROM node:20-alpine
+
+WORKDIR /app
+
 ENV NODE_ENV=production
 
-# Run the application
+COPY package*.json ./
+
+RUN npm ci --only=production
+
+COPY --from=builder /app/dist ./dist
+
 CMD ["npm", "start"]
