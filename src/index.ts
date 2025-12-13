@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
-import { DiscordBot } from './Bot.js';
-import { OrchestratorService } from './OrchestratorService.js';
+import { DiscordBot } from '@/Bot.js';
+import { OrchestratorService } from '@/OrchestratorService.js';
 
 dotenv.config();
 
@@ -13,7 +13,8 @@ if (!token || !clientId) {
 }
 
 const orchestratorService = new OrchestratorService(orchestratorUrl);
-const bot = new DiscordBot(token, clientId, orchestratorService);
+const enablePlainTextCommands = process.env.ENABLE_PLAIN_TEXT_COMMANDS === 'true';
+const bot = new DiscordBot(token, clientId, orchestratorService, enablePlainTextCommands);
 
 bot.start().catch((error: unknown) => {
   console.error('Failed to start bot:', error);
