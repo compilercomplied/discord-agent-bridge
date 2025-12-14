@@ -3,12 +3,12 @@ import { DiscordBot } from '@/Bot.js';
 import { MockOrchestratorService } from './mocks/MockOrchestratorService.js';
 import dotenv from 'dotenv';
 
-dotenv.config({ path: '.integration-tests.env' });
+dotenv.config({ path: '.env' });
 
-const SUT_TOKEN = process.env.SUT_TOKEN;
-const SUT_CLIENT_ID = process.env.SUT_CLIENT_ID;
-const TESTER_TOKEN = process.env.TESTER_TOKEN;
-const TEST_CHANNEL_ID = process.env.TEST_CHANNEL_ID;
+const SUT_TOKEN = process.env.INTEGRATION_SUT_TOKEN;
+const SUT_CLIENT_ID = process.env.INTEGRATION_SUT_CLIENT_ID;
+const TESTER_TOKEN = process.env.INTEGRATION_TESTER_TOKEN;
+const TEST_CHANNEL_ID = process.env.INTEGRATION_TEST_CHANNEL_ID;
 
 if (!SUT_TOKEN || !SUT_CLIENT_ID || !TESTER_TOKEN || !TEST_CHANNEL_ID) {
   console.error('Missing environment variables: SUT_TOKEN, SUT_CLIENT_ID, TESTER_TOKEN, TEST_CHANNEL_ID');
