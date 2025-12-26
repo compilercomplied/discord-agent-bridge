@@ -1,0 +1,17 @@
+encryptionsalt: v1:7GXo6Ozk1z0=:v1:XZIWDrP+W3BvOlT3:ZNr3n+8ycOStURfdj8cm4tR8GWZY9A==
+config:
+  discord-agent-bridge:APP_DISCORD_CLIENT_ID:
+    secure: v1:FkXzYv8A7Xo3w5Wp:Uptsjw0NZhq4rba+pfUWWSZtVj5v/MsOm8LNHd5FrujPIP8=
+  discord-agent-bridge:APP_DISCORD_TOKEN:
+    secure: v1:eCeLEUnShqBN9Hg8:XooMf8yxAKlpf+Gg4ac53si3cTc3naglymKAUE1o9/9jStCPZcyPouYea5nWKTpfs6gEl4R4mSumzv0Z3tKhElFjommMfW5J5ab16Iu4x9VEj9rUs17jCQ==
+  discord-agent-bridge:INTEGRATION_SUT_CLIENT_ID:
+    secure: v1:B0UCQKFF+mf9HRd8:ULUp+BXJshpmxVHDLme4JDgfec16/cU8T3G2YJIf1dwafFM=
+  discord-agent-bridge:INTEGRATION_SUT_TOKEN:
+    secure: v1:wCRr1K3FeIi/Jz9Y:4Spcv+rhp1cRuU5MZS65RK26pmtQnb3AIBfxSkjBFNtu55klN2FcWo1UKcy7aGBm77mtiMcDDEU8ExQbfpZ4U0cgI4cq5mjzJ4eCrsfSQnmoaxuP3tUObQ==
+  discord-agent-bridge:INTEGRATION_TESTER_CLIENT_ID:
+    secure: v1:Q5+HvYVfk6NNHmhf:B9TzQYhZKCsnXr7Lwolkt6aQZ6Vue/D2dx+d7Od8cc2gtck=
+  discord-agent-bridge:INTEGRATION_TESTER_TOKEN:
+    secure: v1:gQ/5bJ+GNPR3nmTE:+WDHurl1CHIeD4ZIl0rEjPJyYmwid3UwosamniSzuvJ3Y8SnesbV9PKxTG0wH4VnHUtSR3Nfy69HCxswecZyFWNmr5ev8rT0ABzv6S2dBu8CnGPUbVKoeA==
+  discord-agent-bridge:INTEGRATION_TEST_CHANNEL_ID:
+    secure: v1:jEFdyk2anE86jkcp:6ud19q9bOh4B/PV38ygppNUwBm+dmZ3lnakIfS/4LTM0Y9k=
+  discord-agent-bridge:APP_AGENT_ORCHESTRATOR_URL: http://localhost:8080

@@ -1,0 +1,16 @@
+config:
+  discord-agent-bridge:APP_DISCORD_CLIENT_ID:
+    secure: AAABAP3M+XR9V8xB0bQ+kh7sbUCtqHpOa3dE1RA3X+toyne/3z6JMuu5+IzXFeq6Namy
+  discord-agent-bridge:APP_DISCORD_TOKEN:
+    secure: AAABABhk7T7okx6GSxCGKTU4t6UTkbI3Z33/0JT2WiW48dNG7LwDcdalmERMA0wyAZpcH2vuRQA+EiBjMpyi0XfbH4LqQbL6GbLbb7fAGfzSe93ldDCFpOLeKZwEVRVFPDN04kKaNv8=
+  discord-agent-bridge:INTEGRATION_SUT_CLIENT_ID:
+    secure: AAABABAddYQXZTr24YlXY5ghSZvhcetymB2KEKNRHWFDu7bciC0lu3+RXoA+XbryECNA
+  discord-agent-bridge:INTEGRATION_SUT_TOKEN:
+    secure: AAABAATMyFpLxLWuihd/dcdgXnPPmTLSwCXRTLKTJ/imOs4Vot4EwIKb9v3y9xSQrFSBwSypbqulPE+56YpEQt+EihCh4qQRrOcH/cLaZr+W5cjoqpZspt0/fZk49YfUe8oBi8N++To=
+  discord-agent-bridge:INTEGRATION_TESTER_CLIENT_ID:
+    secure: AAABAD+7skyvA5XOODOxijY4/xbnk5IiL03CQ0q+xqFDQEoFQwftCikjl/MIDI8IzeYJ
+  discord-agent-bridge:INTEGRATION_TESTER_TOKEN:
+    secure: AAABAJLwsILz3WDhRqR19jFEMKpqNXvMoWNtLcyPZq0ThAWxBRjkxxiQVumCr+WIqsREH/jluO7v2KO1DfZNpiH/++hD8eG8YNrKcebzhI36PZDzgoOfq3GThen8Ft2Lru9ra1ejWFM=
+  discord-agent-bridge:INTEGRATION_TEST_CHANNEL_ID:
+    secure: AAABAHUNQkFuroqz6OTVuFyO55JeY/BN4kzMlRSec6aubRxb+cHrZ9XM9Eg8DPY64Kjb
+  discord-agent-bridge:APP_AGENT_ORCHESTRATOR_URL: http://localhost:8080
