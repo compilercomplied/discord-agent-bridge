@@ -12,7 +12,8 @@ if (!token || !clientId) {
   throw new Error('DISCORD_TOKEN and DISCORD_CLIENT_ID are required');
 }
 
-const orchestratorService = new OrchestratorService(orchestratorUrl);
+// TODO null-force until a clean configuration load exists
+const orchestratorService = new OrchestratorService(orchestratorUrl!);
 const enablePlainTextCommands = process.env.APP_ENABLE_PLAIN_TEXT_COMMANDS === 'true';
 const bot = new DiscordBot(token, clientId, orchestratorService, enablePlainTextCommands);
 
