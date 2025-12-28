@@ -1,7 +1,6 @@
 import * as k8s from "@pulumi/kubernetes";
 import * as pulumi from "@pulumi/pulumi";
 
-// Load configuration
 const config = new pulumi.Config();
 
 const discordToken = config.requireSecret("APP_DISCORD_TOKEN");
@@ -9,12 +8,14 @@ const orchestratorURL = config.requireSecret("APP_AGENT_ORCHESTRATOR_URL");
 const clientID = config.require("APP_DISCORD_CLIENT_ID");
 const dockerImage = config.get("DOCKER_IMAGE") || "ghcr.io/gdario/discord-agent-bridge:latest";
 
+const appNamespace = "agent-edge";
 const appName = "discord-agent-bridge";
 const appLabels = { app: appName };
 
-const ns = new k8s.core.v1.Namespace(appName, {
-  metadata: { name: appName },
-});
+const ns = new k8s.core.v1.Namespace(
+  appNamespace,
+  { metadata: { name: appName }, }
+);
 
 const deployment = new k8s.apps.v1.Deployment(appName, {
   metadata: {
