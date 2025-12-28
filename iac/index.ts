@@ -15,7 +15,7 @@ const appLabels = { app: appName };
 
 const ns = new k8s.core.v1.Namespace(
   appNamespace,
-  { metadata: { name: appName }, }
+  { metadata: { name: appNamespace }, }
 );
 
 const deployment = new k8s.apps.v1.Deployment(appName, {
