@@ -3,6 +3,7 @@ import * as pulumi from "@pulumi/pulumi";
 
 const config = new pulumi.Config();
 
+// TODO configuration loop
 const discordToken = config.requireSecret("APP_DISCORD_TOKEN");
 const orchestratorURL = config.requireSecret("APP_AGENT_ORCHESTRATOR_URL");
 const clientID = config.require("APP_DISCORD_CLIENT_ID");
