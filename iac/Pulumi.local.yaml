@@ -14,4 +14,4 @@ config:
     secure: v1:gQ/5bJ+GNPR3nmTE:+WDHurl1CHIeD4ZIl0rEjPJyYmwid3UwosamniSzuvJ3Y8SnesbV9PKxTG0wH4VnHUtSR3Nfy69HCxswecZyFWNmr5ev8rT0ABzv6S2dBu8CnGPUbVKoeA==
   discord-agent-bridge:INTEGRATION_TEST_CHANNEL_ID:
     secure: v1:jEFdyk2anE86jkcp:6ud19q9bOh4B/PV38ygppNUwBm+dmZ3lnakIfS/4LTM0Y9k=
-  discord-agent-bridge:APP_AGENT_ORCHESTRATOR_URL: http://localhost:8080
+  discord-agent-bridge:APP_AGENT_ORCHESTRATOR_URL: http://agent-orchestrator.agents-control-plane.svc.cluster.local:8080
