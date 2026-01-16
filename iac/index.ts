@@ -9,7 +9,7 @@ const orchestratorURL = config.requireSecret("APP_AGENT_ORCHESTRATOR_URL");
 const clientID = config.require("APP_DISCORD_CLIENT_ID");
 const dockerImage = config.get("DOCKER_IMAGE") || "ghcr.io/gdario/discord-agent-bridge:latest";
 
-const appNamespace = "agent-edge";
+const appNamespace = "public-facing";
 const appName = "discord-agent-bridge";
 const appLabels = { app: appName };
 
